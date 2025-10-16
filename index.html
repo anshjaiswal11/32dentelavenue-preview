@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>32 Dental Avenue - Premium Dental Care</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+        }
+        .hero-bg-slide {
+            transition: opacity 1s ease-in-out;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-periwinkle': '#afabfd',
+                        'secondary-teal': '#88d4cb',
+                        'accent-yellow': '#ffbd59',
+                        'accent-pink': '#ff9aa2',
+                        'neutral-bg': '#f7f4f1',
+                        'neutral-white': '#FFFFFF',
+                        'text-charcoal': '#424040',
+                        'text-light': '#6c757d',
+                        'border-subtle': '#e9ecef',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-neutral-bg text-text-light">
+
+    <!-- Header -->
+    <header id="header" class="bg-neutral-white/80 backdrop-blur-lg sticky top-0 z-50 transition-all duration-300">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" onclick="showPage('home')" class="flex items-center">
+                <!-- Embedded Logo -->
+                <img src="/32dentalavenue.png" alt="32 Dental Avenue Logo" class="h-14">
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#home" onclick="showPage('home')" class="nav-link text-text-charcoal font-semibold border-b-2 border-secondary-teal pb-1">Home</a>
+                <a href="#services" onclick="showPage('services')" class="nav-link text-text-light hover:text-text-charcoal transition-colors duration-300 border-b-2 border-transparent pb-1">Our Services</a>
+                <a href="#" class="text-text-light hover:text-text-charcoal transition-colors duration-300">About</a>
+                <a href="#contact" onclick="showPage('contact')" class="text-text-light hover:text-text-charcoal transition-colors duration-300">Contact</a>
+            </div>
+            <a href="#" class="hidden md:inline-block bg-secondary-teal text-white font-semibold px-6 py-3 rounded-lg hover:bg-opacity-90 transition-all duration-300 shadow-md hover:shadow-lg">
+                Book Appointment
+            </a>
+            <button id="mobile-menu-button" class="md:hidden text-text-charcoal">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-4 6h16" />
+                </svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2">
+            <a href="#home" onclick="showPage('home')" class="block nav-link text-text-charcoal font-semibold">Home</a>
+            <a href="#services" onclick="showPage('services')" class="block nav-link text-text-light hover:text-text-charcoal">Our Services</a>
+            <a href="#" class="block text-text-light hover:text-text-charcoal">About</a>
+            <a href="#contact" onclick="showPage('contact')" class="block text-text-light hover:text-text-charcoal">Contact</a>
+            <a href="#" class="block mt-2 bg-secondary-teal text-white text-center font-semibold px-6 py-3 rounded-lg hover:bg-opacity-90 transition-all duration-300">
+                Book Appointment
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Home Page Content -->
+        <div id="home-page" class="page-content">
+            <!-- Hero Section -->
+            <section class="relative min-h-[60vh] md:min-h-[80vh] flex items-center overflow-hidden">
+                 <!-- Background Image Slideshow Container -->
+                <div class="absolute inset-0">
+                    <div class="hero-bg-slide absolute inset-0 bg-cover bg-center opacity-100" style="background-image: url('https://images.unsplash.com/photo-1600170311833-c2cf5280ce49?q=80&w=1974&auto=format&fit=crop');"></div>
+                    <div class="hero-bg-slide absolute inset-0 bg-cover bg-center opacity-0" style="background-image: url('https://images.unsplash.com/photo-1588776814546-da63b7f3537a?q=80&w=1974&auto=format&fit=crop');"></div>
+                    <div class="hero-bg-slide absolute inset-0 bg-cover bg-center opacity-0" style="background-image: url('https://images.unsplash.com/photo-1533794299596-8e62c152a450?q=80&w=2070&auto=format&fit=crop');"></div>
+                    <div class="hero-bg-slide absolute inset-0 bg-cover bg-center opacity-0" style="background-image: url('https://images.unsplash.com/photo-1588774066564-9f045e6e0c3b?q=80&w=1974&auto=format&fit=crop');"></div>
+                    <div class="hero-bg-slide absolute inset-0 bg-cover bg-center opacity-0" style="background-image: url('https://images.unsplash.com/photo-1603808033196-49d5d9b2a7e6?q=80&w=1974&auto=format&fit=crop');"></div>
+                </div>
+
+                <!-- Premium overlay -->
+                <div class="absolute inset-0 bg-gradient-to-r from-neutral-bg/90 via-neutral-bg/60 to-transparent"></div>
+                
+                <div class="container mx-auto px-6 relative z-10">
+                    <div class="max-w-xl text-left">
+                        <div id="hero-text-content" class="transition-opacity duration-500 ease-in-out">
+                            <h1 id="hero-headline" class="text-4xl md:text-6xl font-bold text-text-charcoal leading-tight">Your Confident Smile <br>Starts Here.</h1>
+                            <p id="hero-subheadline" class="mt-4 text-lg text-text-charcoal max-w-prose">
+                               At 32 Dental Avenue, we combine artistry with advanced dentistry to create smiles that are both beautiful and healthy.
+                            </p>
+                        </div>
+                        <div class="mt-8 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                            <a href="#services" onclick="showPage('services')" class="bg-secondary-teal text-white font-semibold px-8 py-4 rounded-lg hover:bg-opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl text-center">Explore Our Services</a>
+                            <a href="#" class="bg-neutral-white text-text-charcoal font-semibold px-8 py-4 rounded-lg hover:bg-border-subtle transition-all duration-300 shadow-lg hover:shadow-xl text-center">Meet The Team</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Expanded Why Choose Us -->
+            <section class="py-16 bg-neutral-bg">
+                <div class="container mx-auto px-6">
+                    <div class="max-w-4xl mx-auto text-center">
+                        <h3 class="text-2xl font-bold text-text-charcoal">Why Choose 32 Dental Avenue?</h3>
+                        <p class="mt-3 text-text-light">We blend modern dentistry with compassionate care. Here are the reasons patients choose us:</p>
+                        <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+                            <div class="p-6 bg-neutral-white rounded-xl shadow-sm">
+                                <h4 class="font-semibold text-text-charcoal">Personalized Treatment Plans</h4>
+                                <p class="mt-2 text-text-light">Every smile is unique. We create treatment plans that match your goals, budget, and timeline.</p>
+                            </div>
+                            <div class="p-6 bg-neutral-white rounded-xl shadow-sm">
+                                <h4 class="font-semibold text-text-charcoal">Comfort & Safety</h4>
+                                <p class="mt-2 text-text-light">From sedation options to modern sterilization protocols, your comfort and safety come first.</p>
+                            </div>
+                            <div class="p-6 bg-neutral-white rounded-xl shadow-sm">
+                                <h4 class="font-semibold text-text-charcoal">Transparent Pricing</h4>
+                                <p class="mt-2 text-text-light">We discuss options and costs up front so you can make confident decisions about your care.</p>
+                            </div>
+                            <div class="p-6 bg-neutral-white rounded-xl shadow-sm">
+                                <h4 class="font-semibold text-text-charcoal">Aftercare & Support</h4>
+                                <p class="mt-2 text-text-light">Our team provides follow-up care and support to ensure lasting results and satisfaction.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Why Choose Us Section -->
+            <section class="py-20 bg-neutral-white">
+                <div class="container mx-auto px-6 text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold text-text-charcoal">Care You Can Trust</h2>
+                    <p class="mt-4 text-lg text-text-light max-w-3xl mx-auto">We are committed to providing the highest standard of dental care in a comfortable and friendly environment.</p>
+                    <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                        <!-- Feature 1 -->
+                        <div class="p-8 bg-neutral-bg rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                             <div class="bg-secondary-teal/20 text-secondary-teal rounded-full p-4 w-16 h-16 mx-auto flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
+                            </div>
+                            <h3 class="mt-6 text-xl font-semibold text-text-charcoal">Expert Dentists</h3>
+                            <p class="mt-2 text-text-light">Our team is comprised of highly skilled and experienced professionals dedicated to your oral health.</p>
+                        </div>
+                        <!-- Feature 2 -->
+                        <div class="p-8 bg-neutral-bg rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                             <div class="bg-primary-periwinkle/20 text-primary-periwinkle rounded-full p-4 w-16 h-16 mx-auto flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" /></svg>
+                            </div>
+                            <h3 class="mt-6 text-xl font-semibold text-text-charcoal">Modern Technology</h3>
+                            <p class="mt-2 text-text-light">We use state-of-the-art equipment to ensure precise diagnostics and effective treatments.</p>
+                        </div>
+                        <!-- Feature 3 -->
+                        <div class="p-8 bg-neutral-bg rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                             <div class="bg-accent-yellow/20 text-accent-yellow rounded-full p-4 w-16 h-16 mx-auto flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+                            </div>
+                            <h3 class="mt-6 text-xl font-semibold text-text-charcoal">Painless Procedures</h3>
+                            <p class="mt-2 text-text-light">Your comfort is our priority. We strive to make every visit as relaxing and pain-free as possible.</p>
+                        </div>
+                        <!-- Feature 4 -->
+                        <div class="p-8 bg-neutral-bg rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                            <div class="bg-accent-pink/20 text-accent-pink rounded-full p-4 w-16 h-16 mx-auto flex items-center justify-center">
+                               <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                            </div>
+                            <h3 class="mt-6 text-xl font-semibold text-text-charcoal">Patient-Centric Care</h3>
+                            <p class="mt-2 text-text-light">We listen to your needs and create personalized treatment plans for optimal results.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+             <!-- Services Preview Section -->
+            <section class="py-20 bg-neutral-bg">
+                <div class="container mx-auto px-6">
+                    <div class="text-center">
+                        <h2 class="text-3xl md:text-4xl font-bold text-text-charcoal">Our Premier Services</h2>
+                        <p class="mt-4 text-lg text-text-light max-w-3xl mx-auto">Offering a wide range of dental services to keep your smile healthy and bright.</p>
+                    </div>
+                    <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
+                        <!-- Service Card 1 -->
+                        <div class="bg-neutral-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group">
+                            <img src="https://images.unsplash.com/photo-1629905675094-d8a4813a34a8?q=80&w=1200&auto=format&fit=crop" alt="Dental Implants" class="h-44 w-full object-cover group-hover:scale-105 transition-transform duration-300">
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold text-text-charcoal">Dental Implants</h3>
+                                <p class="mt-1 text-text-light text-sm">Restore your smile with natural-looking, durable implants.</p>
+                                <a href="#services" onclick="showPage('services')" class="inline-block mt-3 text-secondary-teal font-semibold text-sm group-hover:underline">Learn More</a>
+                            </div>
+                        </div>
+                        <!-- Service Card 2 -->
+                        <div class="bg-neutral-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group">
+                            <img src="https://images.unsplash.com/photo-1629905675150-1a85124e4a05?q=80&w=1200&auto=format&fit=crop" alt="Teeth Whitening" class="h-44 w-full object-cover group-hover:scale-105 transition-transform duration-300">
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold text-text-charcoal">Teeth Whitening</h3>
+                                <p class="mt-1 text-text-light text-sm">Professional whitening for a brighter, confident smile.</p>
+                                <a href="#services" onclick="showPage('services')" class="inline-block mt-3 text-secondary-teal font-semibold text-sm group-hover:underline">Learn More</a>
+                            </div>
+                        </div>
+                        <!-- Service Card 3 -->
+                         <div class="bg-neutral-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group">
+                            <img src="https://images.unsplash.com/photo-1629905675217-26b675a639b9?q=80&w=1200&auto=format&fit=crop" alt="Invisible Aligners" class="h-44 w-full object-cover group-hover:scale-105 transition-transform duration-300">
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold text-text-charcoal">Invisible Aligners</h3>
+                                <p class="mt-1 text-text-light text-sm">Discreet clear aligners for comfortable, effective straightening.</p>
+                                <a href="#services" onclick="showPage('services')" class="inline-block mt-3 text-secondary-teal font-semibold text-sm group-hover:underline">Learn More</a>
+                            </div>
+                        </div>
+                        <!-- Service Card 4 -->
+                        <div class="bg-neutral-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group">
+                            <img src="https://images.unsplash.com/photo-1588776814546-da63b7f3537a?q=80&w=1200&auto=format&fit=crop" alt="Pediatric Dentistry" class="h-44 w-full object-cover group-hover:scale-105 transition-transform duration-300">
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold text-text-charcoal">Pediatric Dentistry</h3>
+                                <p class="mt-1 text-text-light text-sm">Kid-friendly care in a calming environment for lifelong oral health.</p>
+                                <a href="#services" onclick="showPage('services')" class="inline-block mt-3 text-secondary-teal font-semibold text-sm group-hover:underline">Learn More</a>
+                            </div>
+                        </div>
+                        <!-- Service Card 5 -->
+                        <div class="bg-neutral-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group">
+                            <img src="https://images.unsplash.com/photo-1588774066564-9f045e6e0c3b?q=80&w=1200&auto=format&fit=crop" alt="Dental Crowns" class="h-44 w-full object-cover group-hover:scale-105 transition-transform duration-300">
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold text-text-charcoal">Crowns & Bridges</h3>
+                                <p class="mt-1 text-text-light text-sm">Custom restorations for strength and natural appearance.</p>
+                                <a href="#services" onclick="showPage('services')" class="inline-block mt-3 text-secondary-teal font-semibold text-sm group-hover:underline">Learn More</a>
+                            </div>
+                        </div>
+                        <!-- Service Card 6 -->
+                        <div class="bg-neutral-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group">
+                            <img src="https://images.unsplash.com/photo-1603808033196-49d5d9b2a7e6?q=80&w=1200&auto=format&fit=crop" alt="Oral Surgery" class="h-44 w-full object-cover group-hover:scale-105 transition-transform duration-300">
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold text-text-charcoal">Oral Surgery</h3>
+                                <p class="mt-1 text-text-light text-sm">Comfort-first oral surgery performed by experienced surgeons.</p>
+                                <a href="#services" onclick="showPage('services')" class="inline-block mt-3 text-secondary-teal font-semibold text-sm group-hover:underline">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials -->
+            <section class="py-16 bg-neutral-white">
+                <div class="container mx-auto px-6 text-center">
+                    <h2 class="text-3xl font-bold text-text-charcoal">What Our Patients Say</h2>
+                    <p class="mt-4 text-text-light max-w-2xl mx-auto">Real patients, real smiles. Read stories from people who trusted us with their smiles.</p>
+                    <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="p-6 bg-neutral-bg rounded-xl shadow-sm text-left">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <div class="font-semibold text-text-charcoal">Anna P.</div>
+                                    <div class="text-xs text-text-light">Verified patient</div>
+                                </div>
+                                <div class="text-yellow-400">★★★★★</div>
+                            </div>
+                            <p class="mt-3 text-text-charcoal">"Dr. Smith and the team were so gentle and professional. My smile has never looked better! Highly recommend."</p>
+                        </div>
+                        <div class="p-6 bg-neutral-bg rounded-xl shadow-sm text-left">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <div class="font-semibold text-text-charcoal">Marcus R.</div>
+                                    <div class="text-xs text-text-light">Verified patient</div>
+                                </div>
+                                <div class="text-yellow-400">★★★★☆</div>
+                            </div>
+                            <p class="mt-3 text-text-charcoal">"Fast, painless, and friendly. I recommend 32 Dental Avenue to my family and friends."</p>
+                        </div>
+                        <div class="p-6 bg-neutral-bg rounded-xl shadow-sm text-left">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <div class="font-semibold text-text-charcoal">Priya S.</div>
+                                    <div class="text-xs text-text-light">Verified patient</div>
+                                </div>
+                                <div class="text-yellow-400">★★★★★</div>
+                            </div>
+                            <p class="mt-3 text-text-charcoal">"State-of-the-art equipment and an incredible team. My kids love their visits here."</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Meet the Doctors -->
+            <section class="py-16 bg-neutral-bg">
+                <div class="container mx-auto px-6">
+                    <h2 class="text-3xl font-bold text-text-charcoal text-center">Meet The Doctors</h2>
+                    <p class="mt-3 text-text-light text-center max-w-2xl mx-auto">Experienced clinicians who focus on restorative excellence, cosmetic outcomes and patient comfort.</p>
+                    <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="p-6 bg-neutral-white rounded-xl shadow-sm text-center">
+                            <img src="https://images.unsplash.com/photo-1550831107-1553da8c8464?q=80&w=800&auto=format&fit=crop" alt="Dr. Ava" class="w-28 h-28 rounded-full mx-auto object-cover">
+                            <h4 class="mt-4 font-semibold text-text-charcoal">Dr. Ava Thompson</h4>
+                            <div class="text-sm text-text-light">DDS, Cosmetic & Restorative Dentistry</div>
+                            <ul class="mt-3 text-left text-text-light text-sm list-disc list-inside">
+                                <li>15+ years clinical experience</li>
+                                <li>Advanced training in veneers & implants</li>
+                                <li>Focus on aesthetic outcomes and conservative care</li>
+                            </ul>
+                        </div>
+                        <div class="p-6 bg-neutral-white rounded-xl shadow-sm text-center">
+                            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=800&auto=format&fit=crop" alt="Dr. Noah" class="w-28 h-28 rounded-full mx-auto object-cover">
+                            <h4 class="mt-4 font-semibold text-text-charcoal">Dr. Noah Patel</h4>
+                            <div class="text-sm text-text-light">BDS, Oral Surgery & Implantology</div>
+                            <ul class="mt-3 text-left text-text-light text-sm list-disc list-inside">
+                                <li>Specialist in implant surgery</li>
+                                <li>Comfort-first surgical techniques</li>
+                                <li>Board-certified, patient education advocate</li>
+                            </ul>
+                        </div>
+                        <div class="p-6 bg-neutral-white rounded-xl shadow-sm text-center">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop" alt="Dr. Maya" class="w-28 h-28 rounded-full mx-auto object-cover">
+                            <h4 class="mt-4 font-semibold text-text-charcoal">Dr. Maya Lopez</h4>
+                            <div class="text-sm text-text-light">DDS, Pediatric Dentistry</div>
+                            <ul class="mt-3 text-left text-text-light text-sm list-disc list-inside">
+                                <li>Child-focused behavior management</li>
+                                <li>Preventive care & education for families</li>
+                                <li>Fluoride & sealant programs</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quick Contact (footer area) -->
+            <section class="py-12 bg-neutral-white">
+                <div class="container mx-auto px-6">
+                    <div class="bg-neutral-bg p-6 rounded-xl flex flex-col md:flex-row items-center justify-between gap-4">
+                        <div>
+                            <h4 class="text-xl font-semibold text-text-charcoal">Have questions? Book a visit.</h4>
+                            <p class="text-text-light">Reach out and our team will help you select the best care for your needs.</p>
+                        </div>
+                        <form class="flex-1 md:ml-6 w-full md:w-auto flex gap-2">
+                            <input class="flex-1 p-3 rounded-lg border border-border-subtle" placeholder="Your email" required>
+                            <button class="bg-secondary-teal text-white px-6 py-3 rounded-lg font-semibold">Contact Us</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Services Page Content -->
+        <div id="services-page" class="page-content hidden">
+            <section class="py-20 bg-neutral-white">
+                <div class="container mx-auto px-6 text-center">
+                    <h1 class="text-4xl md:text-5xl font-bold text-text-charcoal">Comprehensive Dental Solutions</h1>
+                    <p class="mt-4 text-lg text-text-light max-w-3xl mx-auto">From routine check-ups to complete smile makeovers, we provide a full spectrum of dental services tailored to your individual needs.</p>
+                </div>
+            </section>
+            
+            <section class="py-20 bg-neutral-bg">
+                <div class="container mx-auto px-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                        <!-- Service Item 1 -->
+                        <div class="bg-neutral-white p-8 rounded-2xl border border-border-subtle hover:border-secondary-teal shadow-sm hover:shadow-xl transition-all duration-300 text-center">
+                            <div class="bg-secondary-teal/20 text-secondary-teal rounded-full p-4 w-20 h-20 mx-auto flex items-center justify-center">
+                                <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.28 12.28a1.5 1.5 0 0 0-2.12-2.12l-5.88 5.88-2.12-2.12a1.5 1.5 0 0 0-2.12 2.12l3.18 3.18a1.5 1.5 0 0 0 2.12 0l7.06-7.06z"/><path d="M12 2a10 10 0 0 0-9.8 11.23 10 10 0 0 0 19.6 0A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16z"/></svg>
+                            </div>
+                            <h3 class="mt-6 text-2xl font-semibold text-text-charcoal">Dental Implants</h3>
+                            <p class="mt-3 text-text-light">Restore your smile's function and appearance with our durable, natural-looking implants.</p>
+                            <button class="mt-6 bg-secondary-teal/10 text-secondary-teal font-semibold px-6 py-3 rounded-lg hover:bg-secondary-teal hover:text-white transition-all duration-300">Book a Consultation</button>
+                        </div>
+                        <!-- Service Item 2 -->
+                        <div class="bg-neutral-white p-8 rounded-2xl border border-border-subtle hover:border-secondary-teal shadow-sm hover:shadow-xl transition-all duration-300 text-center">
+                           <div class="bg-primary-periwinkle/20 text-primary-periwinkle rounded-full p-4 w-20 h-20 mx-auto flex items-center justify-center">
+                                <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3C4.239 3 2 5.239 2 8s2.239 5 5 5 5-2.239 5-5-2.239-5-5-5zM17 13c-2.761 0-5 2.239-5 5s2.239 5 5 5 5-2.239 5-5-2.239-5-5-5z"/></svg>
+                            </div>
+                            <h3 class="mt-6 text-2xl font-semibold text-text-charcoal">Invisible Aligners</h3>
+                            <p class="mt-3 text-text-light">Straighten your teeth discreetly and comfortably with modern clear aligner technology.</p>
+                             <button class="mt-6 bg-secondary-teal/10 text-secondary-teal font-semibold px-6 py-3 rounded-lg hover:bg-secondary-teal hover:text-white transition-all duration-300">Book a Consultation</button>
+                        </div>
+                        <!-- Service Item 3 -->
+                        <div class="bg-neutral-white p-8 rounded-2xl border border-border-subtle hover:border-secondary-teal shadow-sm hover:shadow-xl transition-all duration-300 text-center">
+                            <div class="bg-accent-yellow/20 text-accent-yellow rounded-full p-4 w-20 h-20 mx-auto flex items-center justify-center">
+                               <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            </div>
+                            <h3 class="mt-6 text-2xl font-semibold text-text-charcoal">Teeth Whitening</h3>
+                            <p class="mt-3 text-text-light">Brighten your smile safely and effectively with our professional whitening treatments.</p>
+                             <button class="mt-6 bg-secondary-teal/10 text-secondary-teal font-semibold px-6 py-3 rounded-lg hover:bg-secondary-teal hover:text-white transition-all duration-300">Book a Consultation</button>
+                        </div>
+                        <!-- Service Item 4 -->
+                        <div class="bg-neutral-white p-8 rounded-2xl border border-border-subtle hover:border-secondary-teal shadow-sm hover:shadow-xl transition-all duration-300 text-center">
+                            <div class="bg-accent-pink/20 text-accent-pink rounded-full p-4 w-20 h-20 mx-auto flex items-center justify-center">
+                                <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+                            </div>
+                            <h3 class="mt-6 text-2xl font-semibold text-text-charcoal">Smile Design / Veneers</h3>
+                            <p class="mt-3 text-text-light">Craft your perfect smile with custom-made, high-quality porcelain veneers for a stunning look.</p>
+                             <button class="mt-6 bg-secondary-teal/10 text-secondary-teal font-semibold px-6 py-3 rounded-lg hover:bg-secondary-teal hover:text-white transition-all duration-300">Book a Consultation</button>
+                        </div>
+                        <!-- Service Item 5 -->
+                         <div class="bg-neutral-white p-8 rounded-2xl border border-border-subtle hover:border-secondary-teal shadow-sm hover:shadow-xl transition-all duration-300 text-center">
+                            <div class="bg-primary-periwinkle/20 text-primary-periwinkle rounded-full p-4 w-20 h-20 mx-auto flex items-center justify-center">
+                                <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.5 13.5c0-1.1.9-2 2-2s2 .9 2 2v2a2 2 0 0 1-2 2h-2m2-4V4a2 2 0 0 0-2-2h-1a2 2 0 0 0-2 2v1.5"/><path d="M12.5 13.5h-2a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2m-2-4V4a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2v1.5"/></svg>
+                            </div>
+                            <h3 class="mt-6 text-2xl font-semibold text-text-charcoal">Root Canal Therapy</h3>
+                            <p class="mt-3 text-text-light">Relieve pain and save your natural tooth with our gentle and effective root canal treatments.</p>
+                            <button class="mt-6 bg-secondary-teal/10 text-secondary-teal font-semibold px-6 py-3 rounded-lg hover:bg-secondary-teal hover:text-white transition-all duration-300">Book a Consultation</button>
+                        </div>
+                        <!-- Service Item 6 -->
+                        <div class="bg-neutral-white p-8 rounded-2xl border border-border-subtle hover:border-secondary-teal shadow-sm hover:shadow-xl transition-all duration-300 text-center">
+                            <div class="bg-secondary-teal/20 text-secondary-teal rounded-full p-4 w-20 h-20 mx-auto flex items-center justify-center">
+                                <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 16L3 5l5.5 1.5L12 2l3.5 4.5L21 5l-2 11H5z"/><path d="M12 21a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg>
+                            </div>
+                            <h3 class="mt-6 text-2xl font-semibold text-text-charcoal">Dental Crowns & Bridges</h3>
+                            <p class="mt-3 text-text-light">Strengthen damaged teeth or replace missing ones with custom-fit crowns and bridges.</p>
+                             <button class="mt-6 bg-secondary-teal/10 text-secondary-teal font-semibold px-6 py-3 rounded-lg hover:bg-secondary-teal hover:text-white transition-all duration-300">Book a Consultation</button>
+                        </div>
+                        <!-- Service Item 7 -->
+                        <div class="bg-neutral-white p-8 rounded-2xl border border-border-subtle hover:border-secondary-teal shadow-sm hover:shadow-xl transition-all duration-300 text-center">
+                            <div class="bg-primary-periwinkle/20 text-primary-periwinkle rounded-full p-4 w-20 h-20 mx-auto flex items-center justify-center">
+                                <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3C4.239 3 2 5.239 2 8s2.239 5 5 5 5-2.239 5-5-2.239-5-5-5zM17 13c-2.761 0-5 2.239-5 5s2.239 5 5 5 5-2.239 5-5-2.239-5-5-5z"/></svg>
+                            </div>
+                            <h3 class="mt-6 text-2xl font-semibold text-text-charcoal">Orthodontics</h3>
+                            <p class="mt-3 text-text-light">Traditional braces and orthodontic solutions for long-term bite and alignment correction.</p>
+                             <button class="mt-6 bg-secondary-teal/10 text-secondary-teal font-semibold px-6 py-3 rounded-lg hover:bg-secondary-teal hover:text-white transition-all duration-300">Book a Consultation</button>
+                        </div>
+                        <!-- Service Item 8 -->
+                        <div class="bg-neutral-white p-8 rounded-2xl border border-border-subtle hover:border-secondary-teal shadow-sm hover:shadow-xl transition-all duration-300 text-center">
+                            <div class="bg-accent-yellow/20 text-accent-yellow rounded-full p-4 w-20 h-20 mx-auto flex items-center justify-center">
+                                <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            </div>
+                            <h3 class="mt-6 text-2xl font-semibold text-text-charcoal">Oral Surgery</h3>
+                            <p class="mt-3 text-text-light">Advanced oral surgery and extractions performed with compassionate care and modern techniques.</p>
+                             <button class="mt-6 bg-secondary-teal/10 text-secondary-teal font-semibold px-6 py-3 rounded-lg hover:bg-secondary-teal hover:text-white transition-all duration-300">Book a Consultation</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Page (inline) -->
+            <div id="contact-page" class="page-content hidden">
+                <section class="py-20 bg-neutral-white">
+                    <div class="container mx-auto px-6">
+                        <h2 class="text-3xl font-bold text-text-charcoal">Contact Us</h2>
+                        <p class="mt-2 text-text-light">Have questions or want to book an appointment? Send us a message and we'll get back to you shortly.</p>
+                        <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <form class="space-y-4 bg-neutral-bg p-6 rounded-xl shadow-sm">
+                                <input class="w-full p-3 rounded-lg border border-border-subtle" placeholder="Full name" required>
+                                <input class="w-full p-3 rounded-lg border border-border-subtle" placeholder="Email" type="email" required>
+                                <input class="w-full p-3 rounded-lg border border-border-subtle" placeholder="Phone" type="tel">
+                                <textarea class="w-full p-3 rounded-lg border border-border-subtle h-32" placeholder="How can we help?" required></textarea>
+                                <button class="bg-secondary-teal text-white px-6 py-3 rounded-lg font-semibold">Send Message</button>
+                            </form>
+                            <div class="p-6 rounded-xl bg-neutral-bg shadow-sm">
+                                <h3 class="text-xl font-semibold text-text-charcoal">Visit Us</h3>
+                                <p class="mt-2 text-text-light">123 Dental Lane, Smile City</p>
+                                <p class="mt-1 text-text-light">contact@32dentalavenue.com • +1 (555) 123-4567</p>
+                                <div class="mt-4">
+                                    <h4 class="font-semibold text-text-charcoal">Opening Hours</h4>
+                                    <p class="text-text-light">Mon - Fri: 8:00am - 6:00pm</p>
+                                    <p class="text-text-light">Sat: 9:00am - 2:00pm • Sun: Closed</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Color Palette -->
+            <section class="py-12 bg-neutral-white">
+                <div class="container mx-auto px-6">
+                    <h3 class="text-xl font-semibold text-text-charcoal">Our Color Palette</h3>
+                    <div class="mt-6 flex flex-wrap gap-4">
+                        <div class="w-40 h-28 rounded-xl flex items-end p-3" style="background:#afabfd"><span class="text-sm text-text-charcoal">#afabfd</span></div>
+                        <div class="w-40 h-28 rounded-xl flex items-end p-3" style="background:#88d4cb"><span class="text-sm text-text-charcoal">#88d4cb</span></div>
+                        <div class="w-40 h-28 rounded-xl flex items-end p-3" style="background:#ffbd59"><span class="text-sm text-text-charcoal">#ffbd59</span></div>
+                        <div class="w-40 h-28 rounded-xl flex items-end p-3" style="background:#ff9aa2"><span class="text-sm text-text-charcoal">#ff9aa2</span></div>
+                        <div class="w-40 h-28 rounded-xl flex items-end p-3" style="background:#f7f4f1"><span class="text-sm text-text-charcoal">#f7f4f1</span></div>
+                        <div class="w-40 h-28 rounded-xl flex items-end p-3" style="background:#424040"><span class="text-sm text-neutral-white">#424040</span></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+            <!-- Frequently Asked Questions -->
+            <section class="py-16 bg-neutral-bg">
+                <div class="container mx-auto px-6">
+                    <h2 class="text-3xl font-bold text-text-charcoal text-center">Frequently Asked Questions</h2>
+                    <p class="mt-3 text-text-light text-center max-w-2xl mx-auto">Answers to common questions about our practice and services.</p>
+                    <div class="mt-8 max-w-4xl mx-auto space-y-4">
+                        <details class="bg-neutral-white p-4 rounded-lg shadow-sm">
+                            <summary class="font-semibold text-text-charcoal">Do you accept insurance?</summary>
+                            <p class="mt-2 text-text-light">Yes — we accept most major dental insurance plans. Our team will help verify benefits and provide transparent estimates.</p>
+                        </details>
+                        <details class="bg-neutral-white p-4 rounded-lg shadow-sm">
+                            <summary class="font-semibold text-text-charcoal">What financing options are available?</summary>
+                            <p class="mt-2 text-text-light">We offer payment plans and work with third-party financing partners to make treatment affordable. Ask our front desk for details.</p>
+                        </details>
+                        <details class="bg-neutral-white p-4 rounded-lg shadow-sm">
+                            <summary class="font-semibold text-text-charcoal">Are your procedures painful?</summary>
+                            <p class="mt-2 text-text-light">We prioritize comfort and use modern anesthesia and sedation options to minimize discomfort. Your clinician will discuss options with you.</p>
+                        </details>
+                        <details class="bg-neutral-white p-4 rounded-lg shadow-sm">
+                            <summary class="font-semibold text-text-charcoal">How long does recovery take after oral surgery?</summary>
+                            <p class="mt-2 text-text-light">Recovery varies by procedure but most patients return to normal activities within a few days. We provide clear aftercare instructions and support.</p>
+                        </details>
+                        <details class="bg-neutral-white p-4 rounded-lg shadow-sm">
+                            <summary class="font-semibold text-text-charcoal">Do you offer emergency appointments?</summary>
+                            <p class="mt-2 text-text-light">Yes — we reserve time each day for urgent care. Call us and we will do our best to see you promptly.</p>
+                        </details>
+                        <details class="bg-neutral-white p-4 rounded-lg shadow-sm">
+                            <summary class="font-semibold text-text-charcoal">What should I bring to my first visit?</summary>
+                            <p class="mt-2 text-text-light">Bring a photo ID, insurance card (if applicable), and any recent dental records or X-rays. Arrive a few minutes early to complete registration.</p>
+                        </details>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Form (Full) -->
+            <section id="contact-form-final" class="py-16 bg-neutral-white">
+                <div class="container mx-auto px-6">
+                    <h2 class="text-3xl font-bold text-text-charcoal text-center">Get in Touch</h2>
+                    <p class="mt-3 text-text-light text-center max-w-2xl mx-auto">Fill out the form below and our team will contact you to schedule an appointment or answer your questions.</p>
+                    <div class="mt-8 max-w-3xl mx-auto">
+                        <form id="final-contact-form" class="grid grid-cols-1 md:grid-cols-2 gap-4 bg-neutral-bg p-6 rounded-xl shadow-sm">
+                            <input name="name" class="p-3 rounded-lg border border-border-subtle" placeholder="Full name" required>
+                            <input name="email" type="email" class="p-3 rounded-lg border border-border-subtle" placeholder="Email address" required>
+                            <input name="phone" type="tel" class="p-3 rounded-lg border border-border-subtle" placeholder="Mobile number" required>
+                            <input name="location" class="p-3 rounded-lg border border-border-subtle" placeholder="Location (City, Area)" required>
+                            <textarea name="message" class="col-span-1 md:col-span-2 p-3 rounded-lg border border-border-subtle h-32" placeholder="Your message" required></textarea>
+                            <div class="col-span-1 md:col-span-2 flex items-center justify-between">
+                                <div id="contact-form-status" class="text-sm text-text-light"></div>
+                                <button type="submit" class="bg-secondary-teal text-white px-6 py-3 rounded-lg font-semibold">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+    <!-- Footer -->
+    <footer class="bg-text-charcoal text-neutral-bg">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                     <a href="#" class="flex items-center">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAACvCAMAAAD9g+sUAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAKAUExURQAAANgADdgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAENgAEAAACOl49+AAAAMHRSTlMAAQIDBAUGBwgJCgsMDQ4PEBESExQVFhcYGRobHB0eHyEiJCUnKCkqKywtLi8xMjM0Njc4OTo7PD0+P0BbX3WGlA8AAAABYktHRACIBR1IAAAACXBIWXMAAABIAAAASABGyWs+AAAAB3RJTUUH6AoNExU3J32hpgAAA5VJREFUeNrt3W1XEkEYgOGqoGBAEEFFd7soYkVERUysmBvExoKgoKjYgWJjZ9wVFHfJ3S1k7ofl5W4Sdyb3fP/wzH2S2Z2dxYQghBBCCCGEEEIIIYQQQog2S109U/7d1+p7gP5T1/qA/lPX+oD+U9f6gP5T1+qA/mB1Xb6gH1g9P22s+lXX3r+1u3YvX/L5/1LXP5w/f9X27dsX+Xz/l+uG563+Xf/y798/9f0v3z/V0122e2+e1m3+vXf/4u++e1mX+/fe/Yt++e5lXR7ff/du+bvvXtbp9v2Hh62+f3iwx/YHh7X+fn+wv2k3B5++b2P7w8fVfv+9zU+3H1+q9v3vLz7ffnzp9+358pfff3yq9v0PPz79vj9/Vuv2/Pnzv2+//sPj1v35cxf++w8PW/Xnz//0v/7DA1Z//vyPv38/PGDVnz//w/f/8PCfXf/581/+/v3Dw350/efP//z9J4eF/ej6z5//+fvPDwv70eWf/7j55+s/f/7n7z88LPSjy/4/f/7n7z88LPSjy/5/efjPzj/8/8P/7v+D/+/+v/v/v/y77+eXfP+u/+z//+d/7H94+L8c/F8OPj78nw5+fvzP5J+P/8n85+N/Jv98/F+c/+Hh/3L8h4f/y/EfHv4vx394+L8c/+Hhf334vxz/8f8v//HzP5N/Pj78nwx+fPgvB//Lwf9y8H95ePjP5J+P/5n88/F/cf4fHv4vx/98/J+c/8PDB+f/9+GDB+f/t+EDB+f/t+EDB+f/t+EDB+f/t+EDB+f/t+EDB+f/t+EDB+f/t+EDB+f/t+EDB+f/t+EDB+f/t+EDF+f/t+EDB+f/t+EDB+f/t+EDF+f/9+EDB+f/t+EDB+f/t+EDB+f/t+EDB+f/t+EDh+f/t+EDB+f/t+EDB+f/t+EDB+f/t+EDB+f/9+EDB+f/t+EDB+f/t+EDB+f/t+EDB+f/t+EDh+T9/Pjh+zt8Pjh+z+8PzF+f/t+EDB+f/t+EDB+f/t+EDB+f/t+EDB+f/t+EDB+T9/PgC/Q30vj//5/C9//o+/0/d6+D59r4fv1ft++H59v4dv0fd++D59v4c/p48f3u/h+3R+D9+n7/XwfXq/h+/T+z18n77Xw/fp/R6+T9/r4ft0/o4+/n+438P36P0evk/f6+H79H4P36f3e/g+fa+H79P7PXyfvtfD9+n9Hv6cPn6k7/XwfXq/h+/T+z18n77Xw/fp/R6+T9/r4ft0fg/fp+8Z+PjyXg/fp/d7+D59r4fv0/s9fJ++18P36f0evk/f6+H79H4Pf04f36v3+/h+fb+Hb9f3fvj+fr+Hb9f3fvj+fL+Hf2rPP7zv4fv1fQ/f//N6H98Pfz2uD9/v4XvUvT98P77fI8D0bX0v+/fD8/t+fwz/14Pv4/s9fJ++18P36f0evk/f6+H79H4P36f3+/h+fa+H79P7PXyfvtfD9+n9Hr5P3+vh+/R+D39OH7/fw/fp/R6+T9/r4fv0fg/fp/f7+H59r4fv0/s9fJ++18P36f0e/pw+fqr3+/h+fa+H79P7PXyfvtfD9+n9Hr5P3+vh+/R+D9+n9wz8+Ph+D9+n93v4Pn2vh+/T+z18n77Xw/fp/R6+T9/r4fv0fg9/Th/fqvd7+H59v4dv1/d++P5+v4dv1/d++P58v4d/as8/vPvh+z38P+d/f//v5R/ff/d+fv+n5d/79mX+vV/+fXm3n+u3vvv1+o/v13f7effW1+/Uf317b9H7de++ffev/v7z/WuvP3w4f/+H1/P1//wz9x+//6OH/fvw/z35509OH/5z8u+fHDn85+TfPzl8+M/Jv39y5PCfk3/+5PDhPyf//cmRw39O/v2Towf/nPy7J0cO/zn590+O5fjPyb9/cuRw/f//1V9/+oCHH/78J4efvvPnz3/83eHn77z5558+f/j5O2/+ef3nTw4//ua/V3/+/MN/7vz5Dw+fvvPnH/7w4dN3/vzpPzx8+s6fv/MHh4++8+fv/MFho+/8+Z8/PHx0589/f/jw0Z0///Pnj4/e+fNf3j78589f3j78x//585f3D/+x++u/eXr4j/d/ev/+v6eHH9+P7/fr/3j4+v59f5fX++v73X+/39+//3W/t+/378t+b9/v35f93n7/vuy39v3+fdkv7ffvy35q3+/fl/3Sfv++7Nf2+/dln7Pvy/7P35d90L4v+799X/ZG+77s//Z92Qvt+/L/+8MIIIYQQQgghhBBCCCGEEG1w/wEj8W4nO90+yAAAAABJRU5ErkJggg==" alt="32 Dental Avenue Logo" class="h-14 filter invert brightness-0">
+                    </a>
+                    <p class="mt-4 text-neutral-bg/70">Premium dental care with comfort and confidence.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold">Quick Links</h4>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="#home" onclick="showPage('home')" class="hover:text-secondary-teal transition-colors">Home</a></li>
+                        <li><a href="#services" onclick="showPage('services')" class="hover:text-secondary-teal transition-colors">Services</a></li>
+                        <li><a href="#" class="hover:text-secondary-teal transition-colors">About Us</a></li>
+                        <li><a href="#contact" onclick="showPage('contact')" class="hover:text-secondary-teal transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold">Contact Us</h4>
+                    <ul class="mt-4 space-y-2 text-neutral-bg/70">
+                        <li>123 Dental Lane, Smile City</li>
+                        <li>contact@32dentalavenue.com</li>
+                        <li>+1 (555) 123-4567</li>
+                    </ul>
+                </div>
+                 <div>
+                    <h4 class="text-lg font-semibold">Follow Us</h4>
+                    <div class="flex mt-4 space-x-4">
+                        <a href="#" class="text-neutral-bg/70 hover:text-secondary-teal"><svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35C.59 0 0 .59 0 1.325v21.351C0 23.41.59 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h5.713c.735 0 1.325-.59 1.325-1.325V1.325C24 .59 23.41 0 22.675 0z"/></svg></a>
+                        <a href="#" class="text-neutral-bg/70 hover:text-secondary-teal"><svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zM12 16c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44s-1.44-.645-1.44-1.44.646-1.44 1.44-1.44 1.44.645 1.44 1.44z"/></svg></a>
+                        <a href="#" class="text-neutral-bg/70 hover:text-secondary-teal"><svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616v.064c0 2.298 1.634 4.212 3.793 4.649-.65.177-1.354.238-2.08.088.604 1.884 2.349 3.261 4.418 3.3-1.623 1.274-3.666 2.031-5.88 1.733 2.094 1.342 4.582 2.122 7.24 2.122 8.683 0 13.44-7.222 13.44-13.442 0-.205-.005-.409-.013-.612.92-.665 1.716-1.49 2.345-2.43z"/></svg></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-neutral-bg/20 pt-8 text-center text-neutral-bg/50">
+                <p>&copy; 2025 32 Dental Avenue. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        // --- Mobile Menu Toggle ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+
+        // --- Single Page Navigation ---
+        const pages = document.querySelectorAll('.page-content');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        function showPage(pageId) {
+            pages.forEach(page => {
+                page.classList.add('hidden');
+            });
+
+            const targetPage = document.getElementById(pageId + '-page');
+            if (targetPage) {
+                targetPage.classList.remove('hidden');
+            }
+            
+            navLinks.forEach(link => {
+                link.classList.remove('text-text-charcoal', 'font-semibold', 'border-secondary-teal');
+                link.classList.add('text-text-light', 'border-transparent');
+                 if (link.getAttribute('href') === '#' + pageId) {
+                    link.classList.add('text-text-charcoal', 'font-semibold', 'border-secondary-teal');
+                    link.classList.remove('text-text-light', 'border-transparent');
+                }
+            });
+
+            window.scrollTo(0, 0);
+            mobileMenu.classList.add('hidden');
+        }
+
+        // --- Header shadow on scroll ---
+        const header = document.getElementById('header');
+        window.onscroll = function() {
+            if (window.scrollY > 50) {
+                header.classList.remove('shadow-none');
+                header.classList.add('shadow-md');
+            } else {
+                header.classList.remove('shadow-md');
+                header.classList.add('shadow-none');
+            }
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            showPage('home');
+            
+            // --- Hero Section Slideshow ---
+            const heroSlides = document.querySelectorAll('.hero-bg-slide');
+            const heroHeadline = document.getElementById('hero-headline');
+            const heroSubheadline = document.getElementById('hero-subheadline');
+            const heroTextContent = document.getElementById('hero-text-content');
+
+            const heroContent = [
+                {
+                    headline: 'Your Confident Smile <br>Starts Here.',
+                    subheadline: 'At 32 Dental Avenue, we combine artistry with advanced dentistry to create smiles that are both beautiful and healthy.'
+                },
+                {
+                    headline: 'Advanced Care, <br>Personal Touch.',
+                    subheadline: 'Experience the latest in dental technology in a comfortable and welcoming environment.'
+                },
+                {
+                    headline: 'Designing Beautiful Smiles <br>For Life.',
+                    subheadline: 'From preventive care to complete makeovers, we are your partners in lifelong oral health.'
+                },
+                {
+                    headline: 'Comfort-First Dentistry <br>Every Visit.',
+                    subheadline: 'A calm, caring approach to dental care — built around your comfort and trust.'
+                },
+                {
+                    headline: 'Technology Meets <br>Expert Care.',
+                    subheadline: 'We combine modern equipment with experienced clinicians for predictable results.'
+                }
+            ];
+
+            let currentSlide = 0;
+
+            setInterval(() => {
+                currentSlide = (currentSlide + 1) % heroContent.length;
+                
+                // Update background image with cross-fade
+                heroSlides.forEach((slide, index) => {
+                    slide.style.opacity = index === currentSlide ? '1' : '0';
+                });
+
+                // Fade out text, change it, and fade it back in
+                heroTextContent.style.opacity = '0';
+
+                setTimeout(() => {
+                    heroHeadline.innerHTML = heroContent[currentSlide].headline;
+                    heroSubheadline.innerHTML = heroContent[currentSlide].subheadline;
+                    heroTextContent.style.opacity = '1';
+                }, 500); // This timeout should match the text transition duration
+
+            }, 3000); // Change every 3 seconds
+
+            // Final contact form handler (local only)
+            const finalContactForm = document.getElementById('final-contact-form');
+            const contactFormStatus = document.getElementById('contact-form-status');
+            if (finalContactForm) {
+                finalContactForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const formData = new FormData(finalContactForm);
+                    const name = formData.get('name');
+
+                    // Simple client-side validation (already required attributes on fields)
+                    contactFormStatus.textContent = 'Sending...';
+
+                    // Simulate a send delay and then show success — replace with real POST if needed.
+                    setTimeout(() => {
+                        contactFormStatus.textContent = `Thanks, ${name || 'there'}! We received your message and will contact you soon.`;
+                        finalContactForm.reset();
+                        setTimeout(() => contactFormStatus.textContent = '', 7000);
+                    }, 900);
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
+
